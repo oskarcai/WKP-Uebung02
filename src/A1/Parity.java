@@ -1,14 +1,14 @@
 package A1;
 
-public class ToggleRule implements Rule {
-    private String ruleName = "Toggle";
+public class Parity implements Rule {
+    private String ruleName = "Parity";
 
-    /* Toggle-Rule:
-        Cell-state toggles
+    /* Parity-Rule:
+        Cell-state true if input is even
      */
     @Override
     public boolean computeNextGen(boolean currentState, int input) {
-        return !currentState;
+        return (input % 2 == 0);
     }
 
     @Override

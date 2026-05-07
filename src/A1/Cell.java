@@ -3,7 +3,7 @@ package A1;
 public class Cell {
     private boolean state;
     private Rule regel;     // Interface als Variablentyp
-                            // regel kann jedes Objekt einer Klasse speicher, das Rule implementiert
+                            // -> regel kann Objekte aller Klassen speichern, die Rule implementieren
 
     // Konstruktor -> weist von Anfang an state einen boolean-Zustand
     //                  und regel ein Regelwerk-Objekt zu
@@ -16,7 +16,13 @@ public class Cell {
         state = regel.computeNextGen(state, input);
     }
 
+    // printed aktuellen boolean-Zustand der Zelle
     public void printState() {
         System.out.println("Status ist: " + state);
+    }
+
+    // printed die Regel, der die Zelle folgt
+    public void printMyRule() {
+        regel.printRuleName();
     }
 }
