@@ -7,4 +7,8 @@ public class Add implements Operation {
         return a + b;
     }
 
+    @Override
+    public String getDescription() {
+        return "Addition zweier ganzer Zahlen a und b";
+    }
 }

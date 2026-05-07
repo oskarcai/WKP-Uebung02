@@ -7,4 +7,8 @@ public class Multiply implements Operation {
         return a * b;
     }
 
+    @Override
+    public String getDescription() {
+        return "Multiplikation zweier ganzer Zahlen a und b";
+    }
 }
